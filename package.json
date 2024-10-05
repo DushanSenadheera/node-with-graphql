@@ -2,16 +2,17 @@
   "name": "graphqlwithnode",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "compile": "tsc",
-    "start": "npm run compile && node ./dist/index.js",
-    "dev": "nodemon"
+    "start": "tsc --build",
+    "dev": "node ./dist/index.js",
+    "start:dev": "nodemon ./src/index.ts"
   },
+  "types": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "@apollo/server": "^4.11.0",
     "graphql": "^16.9.0"

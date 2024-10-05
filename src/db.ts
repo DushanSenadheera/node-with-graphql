@@ -1,4 +1,4 @@
-export let employee = [
+let employee = [
     {
       id: 1,
       name: "Jhon",
@@ -9,4 +9,11 @@ export let employee = [
       name: "Jane",
       age: 28,
     },
+    {
+      id: 3,
+      name: "Emma",
+      age: 26,
+    },
   ];
+
+  export default {employee}

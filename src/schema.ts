@@ -18,8 +18,7 @@ export const typeDefs = `#graphql
 
   type Mutation {
     addEmployee(input: empInput): Employee
-    deleteEmp(id: Int): Employee
+    deleteEmp(id: Int): [Employee]
     updateEmp(id: Int, input: empInput): Employee
   }
-
 `;
