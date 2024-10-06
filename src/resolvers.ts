@@ -13,8 +13,17 @@ export const resolvers = {
 
     getEmployeeById: (_: null, { id }: { id: number }) => {
       try {
-        console.log(id);
         return db.employee.find((emp) => emp.id === id);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  },
+
+  Employee: {
+    project(parent: {id: number}) {
+      try {
+        return db.project.find((pro) => pro.id === parent.id);
       } catch (error) {
         console.log(error);
       }
@@ -51,6 +60,7 @@ export const resolvers = {
           emp.age = input.age;
           return emp;
         }
+        return "message";
       } catch (error) {
         console.log(error);
       }

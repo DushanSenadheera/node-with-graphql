@@ -3,6 +3,13 @@ export const typeDefs = `#graphql
     id: Int
     name: String
     age: Int
+    project: Project
+  }
+
+  type Project {
+    id: Int
+    name: String
+    employee: [Employee]
   }
 
   type Query {
